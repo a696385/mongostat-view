@@ -1,0 +1,23 @@
+!!! 5
+html
+	head
+		title= title
+		meta(charset="utf-8")
+		link(rel="stylesheet", href="/css/bootstrap.min.css")
+		block stylesheet
+	body
+		div.page
+			div.masthead
+				h3.muted= title
+			div.container-fluid
+				div.row-fluid
+					div.span12
+						block view
+			div.footer
+				hr
+				h6 Created by
+					a(href="http://vk.com/s696385", style="margin-left: 5px") Andy
+		block absolute
+		script(src="/js/jquery-1.10.2.min.js")
+		script(src="/js/bootstrap.min.js")
+		block scripts

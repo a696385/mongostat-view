@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext);
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.footer{
+    text-align: center;
+}
+.footer h6{
+    color: gray;
+    font-weight: normal;
+}
+
+#chart{
+    height: 500px;
+}

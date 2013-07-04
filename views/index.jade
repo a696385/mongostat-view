@@ -1,0 +1,48 @@
+extends ./layout
+block view
+	.span12
+		.row-fluid
+			legend Settings
+			.span7
+				label.control-label Command promt
+				input.input-xxlarge#command-prompt(type="text", value="/usr/local/mongodb/bin/mongostat")
+			.span4
+				label.control-label Counter
+				select#counter-selector
+					option(selected=true,value="insert") Insert
+					option(value="query") Query
+					option(value="update") Update
+					option(value="delete") Delete
+					option(value="getmore") Get More
+					option(value="command") Command
+					option(value="flushes") Flushes
+					option(value="mapped") Mapped
+					option(value="vsize") Size
+					option(value="res") Res
+					option(value="faults") Faults
+					option(value="idx miss %") IDX Miss %
+					option(value="qr") Query Waiting Read
+					option(value="qw") Query Waiting Write
+					option(value="ar") Client Read
+					option(value="aw") Client Write
+					option(value="netIn") Net In
+					option(value="netOut") Net Out
+					option(value="conn") Connection Count
+		.row-fluid
+			.span12
+				button#start.btn.btn-success Start
+				button#stop.btn.btn-danger Stop
+				button#clear.btn Clear
+		.row-fluid
+			.span12
+				div#chart
+
+block scripts
+	script(src="/socket.io/socket.io.js")
+	script(src="/js/highcharts/js/highcharts.js")
+	script(src="/js/highcharts/js/modules/exporting.js")
+
+	script(src="/js/core.js")
+
+block stylesheet
+	link(rel="stylesheet", href="/css/style.css")
